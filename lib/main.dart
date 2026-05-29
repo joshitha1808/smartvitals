@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/theme/theme_provider.dart';
+import 'features/ble/view/pages/ble_scan_page.dart';
 
 void main() {
   runApp(const ProviderScope(child: MainApp()));
@@ -15,14 +16,7 @@ class MainApp extends ConsumerWidget {
       debugShowCheckedModeBanner: false,
       title: 'SmartVitals',
       theme: theme,
-      home: const Scaffold(
-        body: Center(
-          child: Text(
-            'SmartVitals',
-            style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
-          ),
-        ),
-      ),
+      home: const BleScanPage(),
     );
   }
 }
