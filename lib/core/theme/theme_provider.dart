@@ -7,20 +7,21 @@ part 'theme_provider.g.dart';
 class ThemeNotifier extends _$ThemeNotifier {
   @override
   ThemeData build() {
-    return _lightTheme;
+    return lightTheme;
   }
+
   void toggleTheme() {
-    state = state.brightness == Brightness.light ? _darkTheme : _lightTheme;
+    state = state.brightness == Brightness.light ? darkTheme : lightTheme;
   }
 }
 
-final _lightTheme = ThemeData(
+final lightTheme = ThemeData(
   brightness: Brightness.light,
   colorSchemeSeed: Colors.blue,
   useMaterial3: true,
 );
 
-final _darkTheme = ThemeData(
+final darkTheme = ThemeData(
   brightness: Brightness.dark,
   colorSchemeSeed: Colors.blue,
   useMaterial3: true,
